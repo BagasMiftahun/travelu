@@ -1,3 +1,9 @@
+<?php
+    include 'db.php'; // Mengimpor file koneksi.php
+    $sql = "SELECT * FROM wisata";
+    $result = $conn->query($sql);
+?>
+
 <!doctype html>
 <!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>			<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -147,54 +153,64 @@
 			<!--************************************
 					Features End
 			*************************************-->
-			<!--************************************
-					About Us Start
-			*************************************-->
-			<section class="tg-aboutus">
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-					<div class="row">
-						<figure data-vide-bg="poster: images/aboutus/img-01.jpg" data-vide-options="position: 0% 50%"></figure>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-					<div class="row">
-						<div class="tg-textbox">
-							<div class="tg-sectiontitle">
-								<h2>A Little About Us</h2>
+			<section class="tg-parallax" data-appear-top-offset="600" data-parallax="scroll" data-image-src="images/parallax/bgparallax-1.jpg">
+				<div class="tg-sectionspace tg-zerobottompadding tg-haslayout">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+								<div class="tg-sectionhead tg-sectionheadvtwo">
+									<div class="tg-sectiontitle">
+										<h2>What makes these trips different?</h2>
+									</div>
+								</div>
 							</div>
-							<div class="tg-description">
-								<p>when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-								<p>Electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-lg-push-2">
+								<figure class="tg-videobox">
+									<iframe width="853" height="480" src="https://www.youtube.com/embed/J0ENdUX67LA" title="SEMBALUN - DESA EKSOTIS DI KAKI RINJANI | GET! EXPLORE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+								</figure>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-right">
+			</section>
+
+			<section class="tg-sectionspace tg-haslayout tg-bglight">
+				<div class="container">
 					<div class="row">
-						<figure data-vide-bg="poster: images/aboutus/img-02.jpg" data-vide-options="position: 0% 50%"></figure>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-left">
-					<div class="row">
-						<div class="tg-textbox">
-							<div class="tg-sectiontitle">
-								<h2>A Little About Us</h2>
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="tg-sectionhead">
+								<div class="tg-sectiontitle">
+									<h2>Gallery</h2>
+								</div>
+								<div class="tg-description">
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam consectetuer.</p>
+								</div>
 							</div>
-							<div class="tg-description">
-								<p>when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-								<p>Electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+							<div id="tg-guidesslider" class="tg-guidesslider tg-guides owl-carousel">
+								<?php while ($row = $result->fetch_assoc()): ?>
+								<div class="item tg-guide">
+									<figure><a href="javascript:void(0);"><img src="admin/wisata/<?php echo $row['gambar_wisata']; ?>" alt="image destination" style="height: 300px;object-fit:cover"></a></figure>
+									<div class="tg-guidecontent">
+										<div class="tg-guidecontenthead">
+											<h3><a href="javascript:void(0);"><?php echo $row['nama_wisata']; ?></a></h3>
+											<ul class="tg-socialicons">
+												<li><a href="javascript:void(0);"><img src="images/icons/icon-05.png" alt="image destinations"></a></li>
+												<li><a href="javascript:void(0);"><img src="images/icons/icon-06.png" alt="image destinations"></a></li>
+												<li><a href="javascript:void(0);"><img src="images/icons/icon-07.png" alt="image destinations"></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<?php endwhile; ?>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 			<!--************************************
-					About Us End
-			*************************************-->
-			<!--************************************
 					FAQs Start
 			*************************************-->
-			<section class="tg-sectionspace tg-haslayout tg-bglight">
+			<section class=" tg-haslayout tg-bglight">
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

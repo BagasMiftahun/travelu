@@ -36,6 +36,8 @@
 					<ul>
 						<li> <a href="wisata.php"><i class='bx bx-radio-circle'></i>Data Wisata</a>
 						</li>
+						<li> <a href="galeri.php"><i class='bx bx-radio-circle'></i>Galeri Wisata</a>
+						</li>
 						<li> <a href="penginapan.php"><i class='bx bx-radio-circle'></i>Penginapan</a>
 						</li>
 						<li> <a href="desa.php"><i class='bx bx-radio-circle'></i>Desa</a>

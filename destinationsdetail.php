@@ -1,11 +1,17 @@
 <?php
 include 'db.php';
 
-$id = $_GET['id'];
-$sql = "SELECT * FROM wisata WHERE id = $id";
+$id_wisata = $_GET['id'];
+$sql = "SELECT * FROM wisata WHERE id = $id_wisata";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
+
+// Query untuk mendapatkan gambar galeri_wisata terkait
+$query_galeri = "SELECT gambar_wisata FROM galeri_wisata WHERE id_wisata = $id_wisata";
+$result_galeri = $conn->query($query_galeri);
+
 ?>
+
 
 
 <!doctype html>
@@ -97,7 +103,31 @@ $row = $result->fetch_assoc();
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-10 col-md-push-1 col-lg-10 col-lg-push-1">
 						<div id="tg-content" class="tg-content">
-							<div class="tg-blogdetail">
+							<div class="tg-sectionspace tg-haslayout">
+								<div class="row">
+									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+										<div class="tg-sectionhead tg-sectionheadvtwo">
+											<div class="tg-sectiontitle">
+												<h2>Gallery Wisata</h2>
+											</div>
+											<div class="tg-description">
+												<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam consectetuer</p>
+											</div>
+										</div>
+										<div id="tg-populartoursslider" class="tg-populartoursslider tg-populartours owl-carousel">
+										<?php while ($row_galeri = $result_galeri->fetch_assoc()): ?>
+											<?php $gambar_paths = explode(",", $row_galeri['gambar_wisata']);
+											foreach ($gambar_paths as $gambar_path) { ?>
+											<div class="item tg-populartour">
+												<figure>
+													<a href="javascript:void(0);"><img src="admin/galeri/<?php echo $gambar_path; ?>" style="height: 200px;" alt="image destinations"></a>
+												</figure>
+											</div>
+											<?php } ?>
+										<?php endwhile; ?>					
+										</div>
+									</div>
+							</div>
 								<div class="desc">
 									<?= $row['deskripsi_wisata']; ?>
 								</div>
@@ -177,6 +207,8 @@ $row = $result->fetch_assoc();
 				</div>
 			</div>
 		</main>
+
+
 		<!--************************************
 				Main End
 		*************************************-->
