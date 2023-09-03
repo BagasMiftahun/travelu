@@ -41,7 +41,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 	<link href="assets/css/app.css" rel="stylesheet">
 	<link href="assets/css/icons.css" rel="stylesheet">
-	<title>Rocker - Bootstrap 5 Admin Dashboard Template</title>
+	<title>Wisata Desa Sembalun | Admin Dashboard</title>
 </head>
 
 <body class="">
@@ -51,7 +51,7 @@
 			<nav class="navbar navbar-expand-lg navbar-light rounded-0 bg-white fixed-top rounded-0 shadow-none border-bottom">
 				<div class="container-fluid">
 					<a class="navbar-brand" href="#">
-						<img src="assets/images/logo-img.png" width="140" alt="" />
+						<img src="assets/images/logofix.png" width="140" alt="" />
 					</a>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
 					</button>

@@ -22,7 +22,7 @@ $row = $result->fetch_assoc();
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Rocker - Bootstrap 5 Admin Dashboard Template</title>
+	<title>Wisata Desa Sembalun | Admin Dashboard</title>
 	<?php include 'includes/style.php'; ?>
 </head>
 

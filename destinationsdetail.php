@@ -6,10 +6,18 @@ $sql = "SELECT * FROM wisata WHERE id = $id_wisata";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 
+
 // Query untuk mendapatkan gambar galeri_wisata terkait
 $query_galeri = "SELECT gambar_wisata FROM galeri_wisata WHERE id_wisata = $id_wisata";
 $result_galeri = $conn->query($query_galeri);
 
+
+
+// Query untuk mengambil komentar terkait dengan wisata ini
+$query_komentar = "SELECT * FROM chat_comments WHERE id_wisata = $id_wisata";
+$result_komentar = mysqli_query($conn, $query_komentar);
+
+session_start();
 ?>
 
 
@@ -22,7 +30,7 @@ $result_galeri = $conn->query($query_galeri);
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>BootStrap HTML5 CSS3 Theme</title>
+	<title>Wisata Desa Sembalun | Detail Wisata</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php include 'includes/style.php'; ?>
@@ -127,80 +135,73 @@ $result_galeri = $conn->query($query_galeri);
 										<?php endwhile; ?>					
 										</div>
 									</div>
-							</div>
+								</div>
 								<div class="desc">
 									<?= $row['deskripsi_wisata']; ?>
 								</div>
-								<div class="tg-comments mt-3">
-									<div class="tg-heading tg-headingvtwo">
-										<h2>2 Responses</h2>
-									</div>
+								<hr>
+								<?php while ($row = mysqli_fetch_assoc($result_komentar)): ?>
+								<div class="tg-comments" style="margin-top:10px; margin-bottom:0">
 									<ul id="tg-comments" class="tg-comments">
 										<li>
 											<div class="tg-comment">
-												<figure><img src="images/avatars/img-03.jpg" alt="image description"></figure>
 												<div class="tg-content">
 													<div class="tg-commenthead">
 														<div class="tg-author">
-															<h3>John Smith</h3>
-															<time datetime="2017-12-12">December 21, 2017 at 3:04 pm</time>
+															<h3><?php echo $row['nama']; ?></h3>
+															<time datetime=""><?php echo $row['waktu']; ?></time>
 														</div>
-														<a class="tg-reply" href="javascript:void(0);">reply</a>
 													</div>
 													<div class="tg-description">
-														<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="tg-comment">
-												<figure><img src="images/avatars/img-03.jpg" alt="image description"></figure>
-												<div class="tg-content">
-													<div class="tg-commenthead">
-														<div class="tg-author">
-															<h3>John Smith</h3>
-															<time datetime="2017-12-12">December 21, 2017 at 3:04 pm</time>
-														</div>
-														<a class="tg-reply" href="javascript:void(0);">reply</a>
-													</div>
-													<div class="tg-description">
-														<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+														<p><?php echo $row['komentar']; ?></p>
 													</div>
 												</div>
 											</div>
 										</li>
 									</ul>
 								</div>
-								<div class="tg-leaveyourcomment">
+							<?php endwhile; ?>
+								<!-- Formulir chat -->
+
+								<?php
+								if (isset($_SESSION["username"])) {
+									?>
+									
+									<div class="tg-leaveyourcomment">
 									<div class="tg-heading tg-headingvtwo">
 										<h2>Leave a Reply</h2>
 									</div>
-									<form class="tg-formtheme tg-formleavecomment">
+									<form class="tg-formtheme tg-formleavecomment"  method="post" action="submit_comments.php">
 										<fieldset>
+											<input type="hidden" name="id_wisata" value="<?php echo $id_wisata; ?>">
 											<div class="row">
 												<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 													<div class="form-group">
-														<input type="text" name="fullname" class="form-control" placeholder="Full Name">
+														<input type="text" name="nama" class="form-control" required placeholder="Full Name">
 													</div>
 												</div>
 												<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 													<div class="form-group">
-														<input type="email" name="email" class="form-control" placeholder="Email Address">
+														<input type="email" name="email" class="form-control" required placeholder="Email Address">
 													</div>
 												</div>
 												<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
 													<div class="form-group">
-														<textarea placeholder="Your Comment"></textarea>
+														<textarea name="komentar" placeholder="Your Comment" required></textarea>
 													</div>
 												</div>
 												<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-													<button class="tg-btn"><span>submit</span></button>
+													<button class="tg-btn" type="submit"><span>submit</span></button>
 												</div>
 											</div>
 										</fieldset>
 									</form>
 								</div>
+								<?php
+								} else {
+									echo '<p>Silakan <a href="signin.php">login</a> untuk mengirim komentar.</p>';
+								}
+								?>
 							</div>
 						</div>
 					</div>

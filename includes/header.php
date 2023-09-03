@@ -35,9 +35,18 @@
                                                     <?php
 
                                                     if (isset($_SESSION['username'])) {
-                                                        echo "Hello, " . $_SESSION['username'];
+                                                        echo '
+                                                            <div class="collapse navbar-collapse" id="navbarNav" style="padding-right:0 !important">
+                                                                <button class="tg-btndropdown" id="tg-dropdowndashboard" type="button" data-toggle="dropdown">
+                                                                    <span>' . $_SESSION["username"] . '</span>
+                                                                    <i class="fa fa-caret-down"></i>
+                                                                </button>
+                                                                <ul class="dropdown-menu tg-dropdownusermenu" aria-labelledby="tg-dropdowndashboard">
+                                                                    <li><a href="logout.php">Sign Out</a></li>
+                                                                </ul>
+                                                            </div>';
                                                     } else {
-                                                        echo '<a id="tg-btnsignin" class="tg-btn" href="#tg-loginsingup"><span>sign in</span></a>';
+                                                        echo '<a id="tg-btnsignin" class="tg-btn" href="signup.php"><span>sign in</span></a>';
                                                     }
                                                     ?>
                                                     <div class="dropdown tg-dropdown">

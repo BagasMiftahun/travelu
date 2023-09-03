@@ -3,7 +3,9 @@
     $sql = "SELECT * FROM penginapan";
     $result = $conn->query($sql);
 ?>
-
+<?php
+	session_start();
+?>
 <!doctype html>
 <!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>			<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -12,7 +14,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>BootStrap HTML5 CSS3 Theme</title>
+	<title>Wisata Desa Sembalun | Penginapan</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php include 'includes/style.php'; ?>
@@ -94,12 +96,12 @@
 										<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
 											<div class="tg-populartour">
 												<figure>
-													<a href="tourbookingdetail.html"><img src="admin/penginapan/<?php echo $row['gambar_penginapan']; ?>" alt="image destinations"></a>
+													<a href="bookingdetail.php?id=<?= $row['id']; ?>"><img src="admin/penginapan/<?php echo $row['gambar_penginapan']; ?>" alt="image destinations"></a>
 													<button class="tg-descount"><a href="bookingdetail.php?id=<?= $row['id']; ?>" style="color:white">Lihat Detail</a></button>
 												</figure>
 												<div class="tg-populartourcontent">
 													<div class="tg-populartourtitle">
-														<h3><a href="tourbookingdetail.html"><?php echo $row['nama_penginapan']; ?></a></h3>
+														<h3><a href="bookingdetail.php?id=<?= $row['id']; ?>"><?php echo $row['nama_penginapan']; ?></a></h3>
 													</div>
 													<div class="tg-description">
 														<p><?php echo $row['deskripsi_penginapan']; ?></p>
@@ -110,7 +112,7 @@
 															<em>(3 Review)</em>
 														</div>
 														<div class="tg-pricearea">
-															<h4><?php echo $row['biaya']; ?></h4>
+															<h4>Rp <?php echo $row['biaya']; ?></h4>
 														</div>
 													</div>
 												</div>

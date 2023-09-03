@@ -1,10 +1,7 @@
 <div class="sidebar-wrapper" data-simplebar="true">
 			<div class="sidebar-header">
 				<div>
-					<img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
-				</div>
-				<div>
-					<h4 class="logo-text">Rocker</h4>
+					<img src="assets/images/logofix.png" style="width: 100px;"class="logo-icon" alt="logo icon">
 				</div>
 			 </div>
 			<!--navigation-->
@@ -37,6 +34,8 @@
 						<li> <a href="wisata.php"><i class='bx bx-radio-circle'></i>Data Wisata</a>
 						</li>
 						<li> <a href="galeri.php"><i class='bx bx-radio-circle'></i>Galeri Wisata</a>
+						</li>
+						<li> <a href="chat.php"><i class='bx bx-radio-circle'></i>Responses Wisata</a>
 						</li>
 						<li> <a href="penginapan.php"><i class='bx bx-radio-circle'></i>Penginapan</a>
 						</li>

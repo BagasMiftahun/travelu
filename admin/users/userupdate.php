@@ -6,7 +6,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password']; // Anda perlu mengenkripsi password sebelum menyimpannya ke database
 
-    $sql = "UPDATE users SET username='$username', password='$password' WHERE id=$id";
+    
+    // Enkripsi password baru
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+    $sql = "UPDATE users SET username='$username', password='$hashedPassword' WHERE id=$id";
     if ($conn->query($sql) === TRUE) {
         header("Location: ../users.php");
     } else {
