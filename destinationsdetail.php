@@ -40,6 +40,16 @@ session_start();
 			word-wrap: break-word;
 	        white-space: pre-line;
         }
+		/* CSS untuk gambar */
+		.zoomable-image {
+            transition: transform 0.3s ease; /* Animasi zoom yang smooth */
+        }
+
+        /* CSS untuk menambahkan efek zoom saat hover */
+        .zoomable-image:hover {
+			-webkit-transform: scale(1.08);
+			transform: scale(1.08); /* Ubah nilai scale sesuai dengan efek zoom yang Anda inginkan */
+        }
 	</style>
 </head>
 <body>
@@ -128,7 +138,7 @@ session_start();
 											foreach ($gambar_paths as $gambar_path) { ?>
 											<div class="item tg-populartour">
 												<figure>
-													<a href="javascript:void(0);"><img src="admin/galeri/<?php echo $gambar_path; ?>" style="height: 200px;" alt="image destinations"></a>
+													<a href="javascript:void(0);"><img class="zoomable-image" src="admin/galeri/<?php echo $gambar_path; ?>" style="height: 200px;" alt="image destinations"></a>
 												</figure>
 											</div>
 											<?php } ?>

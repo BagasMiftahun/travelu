@@ -147,7 +147,7 @@
 										<h2><span>01</span>Luxury Hotels</h2>
 									</div>
 									<div class="tg-description">
-										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh tempor cum soluta nobis consectetuer nihil imperdiet doming...</p>
+										<p>Menyediakan informasi tentang berbagai hotel mewah, termasuk fasilitas, harga, dan ulasan pelanggan, sehingga pengguna dapat membuat pilihan yang sesuai dengan preferensi dan anggaran .</p>
 									</div>
 								</div>
 							</div>
@@ -157,7 +157,7 @@
 										<h2><span>02</span>Tourist Guide</h2>
 									</div>
 									<div class="tg-description">
-										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh tempor cum soluta nobis consectetuer nihil imperdiet doming...</p>
+										<p>Membantu pengguna menjelajahi daerah tersebut dengan lebih baik dan memaksimalkan pengalaman wisata .</p>
 									</div>
 								</div>
 							</div>
@@ -167,7 +167,7 @@
 										<h2><span>03</span>Flights Tickets</h2>
 									</div>
 									<div class="tg-description">
-										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh tempor cum soluta nobis consectetuer nihil imperdiet doming...</p>
+										<p>Menemukan penerbangan yang sesuai dengan tanggal perjalanan , bandingkan harga dari berbagai maskapai, dan melakukan pemesanan dengan mudah.</p>
 									</div>
 								</div>
 							</div>

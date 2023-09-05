@@ -84,21 +84,21 @@
 								<li>
 									<span class="tg-contactinfoicon"><i class="fa fa-commenting-o"></i></span>
 									<h2>Get in Touch</h2>
-									<span>Telephone: +51 900 321 4564</span>
-									<span>Mobile: +501 860 3210</span>
-									<strong><a href="mailto:hello@Travleu.com">hello@Travleu.com</a></strong>
+									<span>Telephone: +62 8593 6589 575</span>
+									<span>Mobile: +62 8593 6589 575</span>
+									<strong><a href="mailto:ekoabdi14@gmail.com">ekoabdi14@gmail.com</a></strong>
 								</li>
 								<li>
 									<span class="tg-contactinfoicon"><i class="icon-map-marker"></i></span>
 									<h2>Visit Our Location</h2>
-									<address>Manhatta Hall Veerpolder 7 2361 Empor Ltd 1258, Melbourne, Australia</address>
+									<address>Jl. Gn Rinjani Sembalun, Lombok,Nusa Tenggara Timur</address>
 									<strong><a href="javascript:void(0);">Get Directions</a></strong>
 								</li>
 								<li>
 									<span class="tg-contactinfoicon"><i class="icon-briefcase"></i></span>
-									<h2>Looking for a career?</h2>
-									<div class="tg-description"><p>perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p></div>
-									<strong><a href="mailto:careers@travleu.com">careers@travleu.com</a></strong>
+									<h2>Looking for a order</h2>
+									<div class="tg-description"><p>Check Social Media kami <br>untuk lainnnya</p></div>
+									<strong><a href="mailto:ekoabdi14@gmail.com">ekoabdi14@gmail.com</a></strong>
 								</li>
 							</ul>
 						</div>

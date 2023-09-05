@@ -9,14 +9,14 @@
 								</div>
 								<div class="tg-widgetcontent">
 									<div class="tg-description">
-										<p>berlokasi di Nusa Tenggara Timur, Lombok</p>
+										<p>berlokasi di Jl. Gn Rinjani Sembalun, Nusa Tenggara Timur, Lombok</p>
 									</div>
-									<span>+625955262090</span>
-									<a href="mailto:Ekoabdi1111111@gmail.com">Ekoabdi1111111@gmail.com</a>
+									<span>+6285936589575</span>
+									<a href="mailto:Ekoabdi1111111@gmail.com">ekoabdi14@gmail.com</a>
 									<ul class="tg-socialicons tg-socialiconsvtwo">
-										<li><a href="https://web.facebook.com/Desawisata_sembalun-110903398269940"><i class="icon-facebook-logo-outline"></i></a></li>
-										<li><a href="https://www.instagram.com/eko_abdi14/"><i class="icon-instagram-social-outlined-logo"></i></a></li>
-										<li><a href="https://twitter.com/DwisataSembalun/status/1491783111679483904?s=20&t=bFQO31HmsXAKy6gXjw1-wg"><i class="icon-twitter-social-outlined-logo"></i></a></li>
+										<li><a href="https://web.facebook.com/profile.php?id=61550855225122" target="_blank"><i class="icon-facebook-logo-outline"></i></a></li>
+										<li><a href="https://www.instagram.com/desa_wisatasembalun/" target="_blank"><i class="icon-instagram-social-outlined-logo"></i></a></li>
+										<li><a href="https://twitter.com/WisataSembalun1" target="_blank"><i class="icon-twitter-social-outlined-logo"></i></a></li>
 									</ul>
 								</div>
 							</div>
@@ -28,11 +28,11 @@
 								</div>
 								<div class="tg-widgetcontent">
 									<ul>
-										<li><a href="javascript:void(0);">Bayonne, Melbourne</a></li>
-										<li><a href="javascript:void(0);">Greenville, New Jersey</a></li>
-										<li><a href="javascript:void(0);">The Heights, London</a></li>
-										<li><a href="javascript:void(0);">West Side, New York</a></li>
-										<li><a href="javascript:void(0);">Upper East Side, New York</a></li>
+										<li><a href="javascript:void(0);">Pusuk Sembalun</a></li>
+										<li><a href="javascript:void(0);">Wisatani Garden</a></li>
+										<li><a href="javascript:void(0);">Kebun Strawsberry</a></li>
+										<li><a href="javascript:void(0);">Bukit Nanggi</a></li>
+										<li><a href="javascript:void(0);">Gunung Rinjani</a></li>
 									</ul>
 								</div>
 							</div>
@@ -40,7 +40,7 @@
 						<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
 							<div class="tg-footercolumn tg-widget tg-widgetnewsletter">
 								<div class="tg-widgettitle">
-									<h3>Newsletter</h3>
+									<h3>Email Us</h3>
 								</div>
 								<div class="tg-widgetcontent">
 									<div class="tg-description"><p>Sign up for our mailing list to get latest updates and offers</p></div>
@@ -61,7 +61,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<p>Copyright &copy; 2017 Travlu. All  rights reserved</p>
+							<p>Copyright &copy; 2023 Desa Sembalun. All  rights reserved</p>
 						</div>
 					</div>
 				</div>

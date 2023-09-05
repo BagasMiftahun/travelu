@@ -85,18 +85,14 @@
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 						<div id="tg-content" class="tg-content">
-							<div class="tg-listing tg-booking">
-								<div class="tg-sectiontitle">
-									<h2>Penginapan di Wisata Sembalun</h2>
-								</div>
-								<div class="clearfix"></div>
+							<div class="tg-topdestinations">
 								<div class="row">
 								<?php if ($result->num_rows > 0): ?>
 									<?php while ($row = $result->fetch_assoc()): ?>
-										<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+										<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
 											<div class="tg-populartour">
 												<figure>
-													<a href="bookingdetail.php?id=<?= $row['id']; ?>"><img src="admin/penginapan/<?php echo $row['gambar_penginapan']; ?>" alt="image destinations"></a>
+													<a href="bookingdetail.php?id=<?= $row['id']; ?>"><img src="admin/penginapan/<?php echo $row['gambar_penginapan']; ?>" alt="image destinations" style="height: 300px;object-fit:cover"></a>
 													<button class="tg-descount"><a href="bookingdetail.php?id=<?= $row['id']; ?>" style="color:white">Lihat Detail</a></button>
 												</figure>
 												<div class="tg-populartourcontent">
@@ -118,22 +114,11 @@
 												</div>
 											</div>
 										</div>
-									</div>
 									<?php endwhile; ?>
 								<?php else: ?>
 									<p>Tidak ada data desa.</p>
 								<?php endif; ?>
 								</div>
-								<div class="clearfix"></div>
-								<nav class="tg-pagination">
-									<ul>
-										<li class="tg-active"><a href="javascript:void(0);">1</a></li>
-										<li><a href="javascript:void(0);">2</a></li>
-										<li><a href="javascript:void(0);">3</a></li>
-										<li><a href="javascript:void(0);">4</a></li>
-										<li class="tg-nextpage"><a href="javascript:void(0);"><i class="fa fa-angle-right"></i></a></li>
-									</ul>
-								</nav>
 							</div>
 						</div>
 					</div>
