@@ -27,9 +27,9 @@
                                             <strong class="tg-logo"><a href="index.php"><img src="images/logofix.png" alt="company logo here"></a></strong>
                                             <div class="tg-socialsignin">
                                                 <ul class="tg-socialicons">
-                                                    <li><a href="https://web.facebook.com/Desawisata_sembalun-110903398269940"><i class="icon-facebook-logo-outline"></i></a></li>
-                                                    <li><a href="https://www.instagram.com/eko_abdi14/"><i class="icon-instagram-social-outlined-logo"></i></a></li>
-                                                    <li><a href="https://twitter.com/DwisataSembalun/status/1491783111679483904?s=20&t=bFQO31HmsXAKy6gXjw1-wg"><i class="icon-twitter-social-outlined-logo"></i></a></li>
+                                                    <li><a href="https://web.facebook.com/profile.php?id=61550855225122" target="_blank"><i class="icon-facebook-logo-outline"></i></a></li>
+                                                    <li><a href="https://www.instagram.com/desa_wisatasembalun/" target="_blank"><i class="icon-instagram-social-outlined-logo"></i></a></li>
+                                                    <li><a href="https://twitter.com/WisataSembalun1" target="_blank"><i class="icon-twitter-social-outlined-logo"></i></a></li>
                                                 </ul>
                                                 <div class="tg-userbox">
                                                     <?php

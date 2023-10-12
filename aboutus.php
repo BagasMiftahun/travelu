@@ -18,6 +18,18 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php include 'includes/style.php'; ?>
+	<style>
+        /* CSS untuk gambar */
+        .zoomable-image {
+            transition: transform 0.3s ease; /* Animasi zoom yang smooth */
+        }
+
+        /* CSS untuk menambahkan efek zoom saat hover */
+        .zoomable-image:hover {
+			-webkit-transform: scale(1.08);
+			transform: scale(1.08); /* Ubah nilai scale sesuai dengan efek zoom yang Anda inginkan */
+        }
+	</style>
 </head>
 <body>
 	<!--[if lt IE 8]>
@@ -91,60 +103,30 @@
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<div class="tg-feature">
 									<div class="tg-featuretitle">
-										<h2><span>01</span><a href="javascript:void(0);">Luxury Hotels</a></h2>
+										<h2><span>01</span>Luxury Hotels</h2>
 									</div>
 									<div class="tg-description">
-										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh tempor cum soluta nobis consectetuer nihil imperdiet doming...</p>
+										<p>Menyediakan informasi tentang berbagai hotel mewah, termasuk fasilitas, harga, dan ulasan pelanggan, sehingga pengguna dapat membuat pilihan yang sesuai dengan preferensi dan anggaran .</p>
 									</div>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<div class="tg-feature">
 									<div class="tg-featuretitle">
-										<h2><span>02</span><a href="javascript:void(0);">Tourist Guide</a></h2>
+										<h2><span>02</span>Tourist Guide</h2>
 									</div>
 									<div class="tg-description">
-										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh tempor cum soluta nobis consectetuer nihil imperdiet doming...</p>
+										<p>Membantu pengguna menjelajahi daerah tersebut dengan lebih baik dan memaksimalkan pengalaman wisata .</p>
 									</div>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 								<div class="tg-feature">
 									<div class="tg-featuretitle">
-										<h2><span>03</span><a href="javascript:void(0);">Flights Tickets</a></h2>
+										<h2><span>03</span>Flights Tickets</h2>
 									</div>
 									<div class="tg-description">
-										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh tempor cum soluta nobis consectetuer nihil imperdiet doming...</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-								<div class="tg-feature">
-									<div class="tg-featuretitle">
-										<h2><span>04</span><a href="javascript:void(0);">Luxury Hotels</a></h2>
-									</div>
-									<div class="tg-description">
-										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh tempor cum soluta nobis consectetuer nihil imperdiet doming...</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-								<div class="tg-feature">
-									<div class="tg-featuretitle">
-										<h2><span>05</span><a href="javascript:void(0);">Tourist Guide</a></h2>
-									</div>
-									<div class="tg-description">
-										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh tempor cum soluta nobis consectetuer nihil imperdiet doming...</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-								<div class="tg-feature">
-									<div class="tg-featuretitle">
-										<h2><span>06</span><a href="javascript:void(0);">Flights Tickets</a></h2>
-									</div>
-									<div class="tg-description">
-										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh tempor cum soluta nobis consectetuer nihil imperdiet doming...</p>
+										<p>Menemukan penerbangan yang sesuai dengan tanggal perjalanan , bandingkan harga dari berbagai maskapai, dan melakukan pemesanan dengan mudah.</p>
 									</div>
 								</div>
 							</div>
@@ -185,20 +167,24 @@
 									<h2>Gallery</h2>
 								</div>
 								<div class="tg-description">
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam consectetuer.</p>
+									<p>Eksplorasi Visual Destinasi Indah kami</p>
 								</div>
 							</div>
 							<div id="tg-guidesslider" class="tg-guidesslider tg-guides owl-carousel">
 								<?php while ($row = $result->fetch_assoc()): ?>
 								<div class="item tg-guide">
-									<figure><a href="javascript:void(0);"><img src="admin/wisata/<?php echo $row['gambar_wisata']; ?>" alt="image destination" style="height: 300px;object-fit:cover"></a></figure>
+									<figure>
+										<a href="javascript:void(0);">
+											<img class="zoomable-image" src="admin/wisata/<?php echo $row['gambar_wisata']; ?>" alt="image destination" style="height: 300px;object-fit:cover">
+										</a>
+									</figure>
 									<div class="tg-guidecontent">
 										<div class="tg-guidecontenthead">
 											<h3><a href="javascript:void(0);"><?php echo $row['nama_wisata']; ?></a></h3>
 											<ul class="tg-socialicons">
-												<li><a href="javascript:void(0);"><img src="images/icons/icon-05.png" alt="image destinations"></a></li>
-												<li><a href="javascript:void(0);"><img src="images/icons/icon-06.png" alt="image destinations"></a></li>
-												<li><a href="javascript:void(0);"><img src="images/icons/icon-07.png" alt="image destinations"></a></li>
+												<li><a href="https://web.facebook.com/profile.php?id=61550855225122" target="_blank"><img src="images/icons/icon-05.png" alt="image destinations"></a></li>
+												<li><a href="https://www.instagram.com/desa_wisatasembalun/" target="_blank"><img src="images/icons/icon-06.png" alt="image destinations"></a></li>
+												<li><a href="https://twitter.com/WisataSembalun1" target="_blank"s><img src="images/icons/icon-07.png" alt="image destinations"></a></li>
 											</ul>
 										</div>
 									</div>
@@ -213,7 +199,7 @@
 					FAQs Start
 			*************************************-->
 			<section class=" tg-haslayout tg-bglight">
-				<div class="container">
+				<div class="container" style="margin-bottom:100px">
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							
@@ -222,39 +208,39 @@
 										<h2>Need Help?</h2>
 									</div>
 									<div class="tg-description">
-										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam consectetuer.</p>
+										<p>Temukan jawaban atas pertanyaan umum Anda di sini.</p>
 									</div>
 								</div>
 								<div id="tg-accordion" class="tg-accordion" role="tablist" aria-multiselectable="true">
 									<div class="tg-panel">
-										<h4>Ornare Quam Justo Tellusv</h4>
+										<h4>Bagaimana saya bisa mendapatkan peta wisata Desa Sembalun di Lombok?</h4>
 										<div class="tg-panelcontent">
 											<div class="tg-description">
-												<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue Sed non mauris vitae;erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
+												<p>Anda dapat mengunjungi pusat informasi wisata lokal di Desa Sembalun atau mencarinya secara online di situs web resmi pariwisata Lombok. Peta tersebut akan membantu Anda menemukan lokasi objek wisata, akomodasi, dan fasilitas penting lainnya di daerah tersebut.</p>
 											</div>
 										</div>
 									</div>
 									<div class="tg-panel">
-										<h4>A work of art is above all an adventure of mind!</h4>
+										<h4>Apa saja aktivitas wisata yang dapat saya nikmati di Desa Sembalun?</h4>
 										<div class="tg-panelcontent">
 											<div class="tg-description">
-												<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue Sed non mauris vitae;erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
+												<p>Di Desa Sembalun, Anda dapat menikmati berbagai aktivitas wisata, termasuk mendaki Gunung Rinjani, mengunjungi Air Terjun Tiu Kelep, menjelajahi kebun stroberi, mengenal budaya lokal, dan berinteraksi dengan penduduk setempat. Puncak Gunung Rinjani adalah tujuan utama bagi pendaki yang mencari petualangan.</p>
 											</div>
 										</div>
 									</div>
 									<div class="tg-panel">
-										<h4>Pharetra Etiam Inceptos</h4>
+										<h4>Apakah ada opsi akomodasi yang baik di Desa Sembalun?</h4>
 										<div class="tg-panelcontent">
 											<div class="tg-description">
-												<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue Sed non mauris vitae;erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
+												<p>Ya, Desa Sembalun memiliki berbagai pilihan akomodasi, mulai dari guest house, homestay, hingga penginapan mewah. Beberapa tempat menginap bahkan menawarkan pemandangan spektakuler Gunung Rinjani. Pastikan untuk memesan tempat menginap Anda sebelumnya, terutama selama musim padat, seperti bulan-bulan musim panas.</p>
 											</div>
 										</div>
 									</div>
 									<div class="tg-panel">
-										<h4>We pride ourselves on innovative.</h4>
+										<h4>Kapan waktu terbaik untuk berkunjung ke Desa Sembalun dari segi cuaca?</h4>
 										<div class="tg-panelcontent">
 											<div class="tg-description">
-												<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue Sed non mauris vitae;erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
+												<p>Waktu terbaik untuk mengunjungi Desa Sembalun adalah selama musim kering, biasanya antara Mei hingga Agustus. Selama periode ini, cuaca cenderung cerah dan tidak ada hujan berlebihan, yang membuat mendaki Gunung Rinjani dan menjelajahi daerah sekitarnya menjadi lebih nyaman. Hindari kunjungan selama musim hujan (Desember hingga Maret) karena kondisi trekking bisa lebih sulit dan berbahaya. Pastikan untuk memeriksa perkiraan cuaca sebelum pergi untuk mempersiapkan diri dengan baik.</p>
 											</div>
 										</div>
 									</div>

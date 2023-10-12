@@ -123,7 +123,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 													<label class="form-check-label" for="flexSwitchCheckChecked">Remember Me</label>
 												</div>
 											</div>
-											<div class="col-md-6 text-end">	<a href="authentication-forgot-password.html">Forgot Password ?</a>
+											<div class="col-md-6 text-end">	<a href="forgot_password.php">Forgot Password ?</a>
 											</div>
 											<div class="col-12">
 												<div class="d-grid">
